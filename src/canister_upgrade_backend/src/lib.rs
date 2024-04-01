@@ -1,5 +1,4 @@
 use candid::Principal; 
-use ic_cdk::caller;
 use ic_cdk::{
     api::call::ManualReply, init, post_upgrade, pre_upgrade, query, storage, update
 }; 
@@ -14,7 +13,7 @@ thread_local! {
     static STORE: RefCell<Store> = RefCell::default(); 
 }
 
-// This init function adds the user who instantiated the canister to the USERS set.
+// This init function adds the user who instantiated the canister to the USERS set
 #[init]
 fn init() {
     USERS.with(|users| users.borrow_mut().insert(ic_cdk::api::caller())); 
