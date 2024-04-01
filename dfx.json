@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "canister_upgrade_backend": {
+      "candid": "src/canister_upgrade_backend/canister_upgrade_backend.did",
+      "package": "canister_upgrade_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

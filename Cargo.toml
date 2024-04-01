@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/canister_upgrade_backend"
+]
+resolver = "2"
